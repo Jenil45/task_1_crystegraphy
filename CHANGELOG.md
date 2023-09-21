@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Jenil45/task_1_crystegraphy/compare/v1.1.0...v1.2.0) (2023-09-21)
+
+
+### Features
+
+* Project starter file included reset css , mixins and variables ([1c208cf](https://github.com/Jenil45/task_1_crystegraphy/commit/1c208cf7ed7168408cf37f40ff1ce316d96faf1a))
+
 ## [1.1.0](https://github.com/Jenil45/task_1_crystegraphy/compare/v1.0.1...v1.1.0) (2023-09-21)
 
 
