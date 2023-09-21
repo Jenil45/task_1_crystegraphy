@@ -1,0 +1,15 @@
+/* || MIXINS */
+
+@mixin flex($direction: row , $align-item: center , $justify-content: center) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align-item;
+    justify-content: $justify-content;
+}
+
+@mixin grid-column($column-umber , $row-height , $align-items: center , $justify-content: center) {
+    display: grid;
+    grid-template-columns: repeat($column-umber , 1fr);
+    grid-auto-rows: $row-height;
+    place-content: $align-items $justify-content;
+}

@@ -1,0 +1,53 @@
+@use 'variables' as v;
+@use 'mixins' as mx;
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    width: 100svw;
+    height: 100svh;
+    line-height: 1.17rem;
+    font-size: v.$font-size-normal;
+    font-family: v.$font-family-normal;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-size: v.$font-size-heading;
+    font-family: v.$font-family-heading;
+    line-height: 4.53rem;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button {
+    font: inherit;
+}
