@@ -1,0 +1,40 @@
+@use "variables" as v;
+@use "mixins" as mx;
+
+.main {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home {
+    color: v.$clr-secondary;
+    width: 100%;
+    height: 42.5em;
+    background-image: url('../../assets/images/background/bg.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__container {
+        width: 29%;
+        position: absolute;
+        top: 9.8rem;
+        left: 3.75rem;
+        @include mx.flex(column , flex-start , flex-start);
+        gap: 1.56em;
+    }
+
+    &__btn {
+        padding: 0.53em 1.31em;
+        background-color: v.$clr-secondary;
+        color: v.$clr-primary;
+        border-radius: 3.125em;
+        font-size: v.$font-size-btn;
+        font-family: v.$font-family-normal;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}

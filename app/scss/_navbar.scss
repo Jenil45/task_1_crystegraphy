@@ -1,0 +1,43 @@
+@use "variables" as v;
+@use "mixins" as mx;
+
+.header {
+
+    position: relative;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+
+    &__section {
+        width: 90%;
+        padding: 0.8em 3.75em;
+        margin-inline: auto;
+        @include mx.flex(row, center, space-between);
+    }
+
+    &__logo {
+        color: v.$clr-secondary;
+        font-size: v.$font-size-card-heading;
+        line-height: 2.72rem;
+        font-family: v.$font-family-heading;
+        font-weight: 400;
+    }
+}
+
+.nav {
+    width: 50%;
+
+    &__ul {
+        @include mx.flex(row);
+        gap: 2.5em;
+    }
+
+    &__list {
+        color: v.$clr-secondary;
+        padding: 0.875em 0;
+        font-size: v.$font-size-list;
+        font-weight: 500;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+}
