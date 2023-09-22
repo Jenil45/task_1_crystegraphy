@@ -32,10 +32,17 @@ h3 {
     line-height: 4.53rem;
 }
 
+p {
+    font-size: v.$font-size-normal;
+    font-family: v.$font-family-normal;
+    line-height: 1.15rem;
+}
+
 a,
 a:visited,
 a:hover {
     text-decoration: none;
+    color: inherit;
 }
 
 li {
@@ -44,9 +51,10 @@ li {
 }
 
 img {
-    display: block;
+    display: inline-block;
     max-width: 100%;
     height: auto;
+    vertical-align: middle;
 }
 
 input,

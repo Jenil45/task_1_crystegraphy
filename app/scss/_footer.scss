@@ -1,0 +1,74 @@
+@use "variables" as v;
+@use "mixins" as mx;
+
+.footer {
+    margin-top: v.$margin-top-section;
+    width: 100%;   
+    background-color: v.$clr-footer;
+    color: v.$clr-secondary;
+    @include mx.flex(column);
+    
+    &-nav {
+        width: 60%;
+        padding: 1.875rem 0;
+    
+        &__ul {
+            @include mx.flex(row);
+            gap: 5em;
+            
+            li {
+                color: v.$clr-secondary;
+                padding: 0.875em 0;
+                font-size: v.$font-size-list;
+                font-weight: 500;
+                text-transform: capitalize;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &-contact {
+        padding: 2.5em 0;   
+        @include mx.flex(row);
+        gap: 3.75em;
+
+
+        &__card {
+            @include mx.flex(column);
+            gap: 1.25em;
+            padding: 3.75em;
+
+            &:nth-child(2) {
+                position: relative;
+            }
+
+            &:nth-child(2)::after {
+                position: absolute;
+                content: "";
+                height: 70px;
+                border: 1px solid #2B2A2A;
+                right: 0;
+            }
+
+            &:nth-child(2)::before {
+                position: absolute;
+                content: "";
+                height: 70px;
+                border: 1px solid #2B2A2A;
+                left: 0;
+            }
+        }
+
+        &__icon-wrapper {
+            height: 50px;
+            width: 50px;
+            background-color: v.$clr-primary;
+            @include mx.flex(row);
+            border-radius: 50%;
+        }
+    }
+
+    &-content {
+        padding: 0.93em 0;
+    }    
+}

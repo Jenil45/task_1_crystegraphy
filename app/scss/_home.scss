@@ -28,13 +28,7 @@
     }
 
     &__btn {
-        padding: 0.53em 1.31em;
         background-color: v.$clr-secondary;
         color: v.$clr-primary;
-        border-radius: 3.125em;
-        font-size: v.$font-size-btn;
-        font-family: v.$font-family-normal;
-        font-weight: 600;
-        cursor: pointer;
     }
 }

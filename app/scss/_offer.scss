@@ -1,0 +1,48 @@
+@use "variables" as v;
+@use "mixins" as mx;
+
+.offer {
+
+    &__container {
+        @include mx.flex(row);
+        gap: 4.5rem;
+    }
+
+    &__info {
+        flex: 1;
+
+        &-wrapper {
+            width: 85%;
+            @include mx.flex(column , flex-start , flex-start);
+            float: right;
+            gap: 1.875rem;
+        }
+    }
+
+    &__img-section {
+        flex: 1;
+    }
+
+    &__input-grp {
+        background-color: v.$clr-primary;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    input {
+        padding: 10px;
+        color: v.$clr-footer;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+    }
+
+    &__btn {
+        background-color: transparent;
+        color: v.$clr-secondary;
+        padding: 10px 33px;
+        border-radius: 10px;
+        border: none;
+
+    }
+}

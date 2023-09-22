@@ -1,0 +1,43 @@
+@use "variables" as v;
+@use "mixins" as mx;
+
+.text-heading-clr {
+    color: v.$clr-primary;
+}
+
+.btn {
+    padding: v.$btn-padding;
+    border-radius: v.$btn-border-radius;
+    font-size: v.$font-size-btn;
+    font-family: v.$font-family-normal;
+    font-weight: v.$btn-font-weight;
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// also use for logo
+.card-title {
+    font-size: v.$font-size-card-heading;
+    line-height: 2.72rem;
+    font-family: v.$font-family-heading;
+    font-weight: 400;
+}
+
+.line {
+    width: 90%;
+    margin-inline: auto;
+    border: 1px solid #2B2A2A;
+}
+
+.section {
+    margin-top: v.$margin-top-section;
+    width: 100%;
+}
+
+.section-container {
+    width: 80%;
+    margin-inline: auto;
+}

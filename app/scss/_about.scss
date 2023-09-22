@@ -1,0 +1,46 @@
+@use "variables" as v;
+@use "mixins" as mx;
+
+.about {
+
+    &__container {
+        position: relative;
+        @include mx.flex(row);
+
+        &::after {
+            content: url('../../assets/images/background/floating_coffee.png');
+
+            position: absolute;
+            right: -10%;
+            bottom: -20%;
+        }
+    }
+
+    &__img-section {
+        flex: 1;
+    }
+
+    &__img-container {
+        width: 80%;
+        float: right;
+    }
+
+    &__info {
+        flex: 1;
+        @include mx.flex(column , flex-start , flex-start);
+        gap: v.$gap-section;
+    }
+
+    &__btn {
+        background-color: v.$clr-primary;
+        color: v.$clr-secondary;
+        border: 1px solid v.$clr-primary;
+        transition: all 1s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            color: v.$clr-primary;
+        }
+    }
+
+}

@@ -4,9 +4,9 @@
 .header {
 
     position: relative;
-    z-index: 1;
-    top: 0;
     width: 100%;
+    top: 0;
+    z-index: 1;
 
     &__section {
         width: 90%;
@@ -17,10 +17,6 @@
 
     &__logo {
         color: v.$clr-secondary;
-        font-size: v.$font-size-card-heading;
-        line-height: 2.72rem;
-        font-family: v.$font-family-heading;
-        font-weight: 400;
     }
 }
 
@@ -30,14 +26,34 @@
     &__ul {
         @include mx.flex(row);
         gap: 2.5em;
-    }
+        
+        li {
+            position: relative;
+            color: v.$clr-secondary;
+            padding: 0.875em 0;
+            font-size: v.$font-size-list;
+            font-weight: 500;
+            text-transform: capitalize;
+            overflow-x: hidden;
+            cursor: pointer;
 
-    &__list {
-        color: v.$clr-secondary;
-        padding: 0.875em 0;
-        font-size: v.$font-size-list;
-        font-weight: 500;
-        text-transform: capitalize;
-        cursor: pointer;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                margin-inline: auto;
+                border: 1px solid v.$clr-secondary;
+                transform: translateX(-100%);
+                transition: all 0.4s ease-in-out;
+            }
+
+            &:hover {
+                &::after {
+                    transform: translateX(0%);
+                }
+            }
+        }
     }
 }
