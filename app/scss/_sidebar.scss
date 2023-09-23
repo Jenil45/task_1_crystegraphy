@@ -10,6 +10,11 @@
     background-color: v.$clr-footer;
     color: v.$clr-secondary;
     transition: all 0.8s ease-in-out;
+    display: block;
+
+    @include mx.media_query(large) {
+            display: none;
+    }
 
     &__nav {
         width: 95%;
