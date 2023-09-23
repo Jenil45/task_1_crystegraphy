@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/Jenil45/task_1_crystegraphy/compare/v1.3.0...v1.3.1) (2023-09-23)
+
+
+### Bug Fixes
+
+* sidebar bug fix ([8fc053b](https://github.com/Jenil45/task_1_crystegraphy/commit/8fc053bdd28a1afb1fc0f7581032bc9e8f34a8f8))
+
 ## [1.3.0](https://github.com/Jenil45/task_1_crystegraphy/compare/v1.2.3...v1.3.0) (2023-09-23)
 
 
