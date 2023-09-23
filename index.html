@@ -7,6 +7,7 @@
     <title>Cofey Template</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./dist/style.css">
+    <script src="./app/js/sidebar.js"></script>
 </head>
 
 <body>
@@ -14,8 +15,10 @@
     <!-- HEADER SECTION Start -->
     <header class="header">
         <section class="header__section">
-
-            <h4 class="card-title header__logo"><a href="#home">Cofey</a></h4>
+            <div class="header__logo-section">
+                <h4 class="card-title header__logo"><a href="#home">Cofey</a></h4>
+                <img src="./assets/images/icons/menu.svg" alt="" onclick="sidebarActivate()">
+            </div>
 
             <!-- NAV COMPONENT START -->
             <nav class="nav">
@@ -41,6 +44,32 @@
                 </ul>
             </nav>
             <!-- NAV COMPONENT END -->
+        </section>
+
+        <section class="sidebar sidebar-deactive" id="sidebar">
+            <nav class="sidebar__nav">
+                <button class="close-btn" onclick="sidebarActivate()">&times;</button>
+                <ul class="sidebar__nav-ul">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#pictures">Our Team</a>
+                    </li>
+                    <li>
+                        <a href="#offer">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
         </section>
 
     </header>

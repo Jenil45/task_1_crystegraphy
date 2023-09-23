@@ -1,8 +1,10 @@
+@use "mixins" as mx;
 /* || FONTS Import*/
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Work+Sans&display=swap');
 
 // font-family: 'Kaushan Script', cursive;
 // font-family: 'Work Sans', sans-serif;
+
 
 /* || COLORS */
 
@@ -11,12 +13,25 @@ $clr-secondary: #ffffff;
 $clr-footer: #000000;
 
 /* || FONT SIZES */
-$font-size-normal: 1rem;
-$font-size-list: 1.125rem;
-$font-size-btn: 0.9375rem;
-$font-size-card-heading: 1.875rem;
-$font-size-heading:3.125rem; 
 
+// normal text size with breakpoint
+$font-size-normal: 1rem;
+$font-size-normal-md: 0.95rem;
+$font-size-normal-sm: 0.875rem;
+
+$font-size-list: 1.125rem;
+
+$font-size-btn: 0.9375rem;
+
+$font-size-card-heading: 1.875rem;
+$font-size-card-heading-md: 1.5;
+$font-size-card-heading-sm: 1.225rem;
+
+// heading font size with breakpoint
+$font-size-heading:3.125rem; 
+$font-size-heading-md:2.625rem; 
+$font-size-heading-sm:2.125rem; 
+    
 /* || FONT FAMILY */
 $font-family-heading: 'Kaushan Script', cursive;
 $font-family-normal: 'Work Sans', sans-serif;

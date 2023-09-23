@@ -4,32 +4,59 @@
 .offer {
 
     &__container {
-        @include mx.flex(row);
-        gap: 4.5rem;
+        @include mx.flex(column);
+        gap:0.5rem;
+        
+        
+        @include mx.media_query(medium) {
+            @include mx.flex(row);
+            gap: 1.5rem;
+        }
+
+        @include mx.media_query(xlarge) {
+            @include mx.flex(row);
+            gap: 4.5rem;
+        }
     }
 
     &__info {
-        flex: 1;
+        flex: 3;
 
         &-wrapper {
-            width: 85%;
+            width: 90%;
             @include mx.flex(column , flex-start , flex-start);
-            float: right;
+            // float: right;
             gap: 1.875rem;
+            
+            @include mx.media_query(medium) {
+                width: 85%;
+                float: right;
+            }
         }
     }
 
     &__img-section {
-        flex: 1;
+        flex: 4;
+
+        img {
+            transform: scale(0.8);
+
+            @include mx.media_query(large) {
+                transform: scale(1);
+            }
+        }
     }
 
     &__input-grp {
+        width: 100%;
         background-color: v.$clr-primary;
         padding: 5px;
         border-radius: 10px;
+        @include mx.flex(row);
     }
 
     input {
+        width: 60%;
         padding: 10px;
         color: v.$clr-footer;
         border-radius: 10px;
@@ -38,9 +65,10 @@
     }
 
     &__btn {
+        width: 40%;
         background-color: transparent;
         color: v.$clr-secondary;
-        padding: 10px 33px;
+        // padding: 10px 33px;
         border-radius: 10px;
         border: none;
 

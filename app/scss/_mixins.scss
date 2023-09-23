@@ -13,3 +13,14 @@
     grid-auto-rows: $row-height;
     place-content: $align-items $justify-content;
 }
+
+/* || MEDIA Query with breakpoints */
+
+// 768px medium , 1024px large , 1200px xtra large
+$breakpoints: ("medium": 48em, "large": 64em, "xlarge": 75em);
+
+@mixin media_query($size) {
+    @media (min-width: map-get($breakpoints , $size)) {
+        @content;
+    }
+}

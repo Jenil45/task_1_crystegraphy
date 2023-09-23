@@ -20,10 +20,21 @@
 
 // also use for logo
 .card-title {
-    font-size: v.$font-size-card-heading;
-    line-height: 2.72rem;
+    font-size: v.$font-size-card-heading-sm;
+    line-height: 1.75rem;
     font-family: v.$font-family-heading;
     font-weight: 400;
+    transition: all 0.4s ease-in-out;
+
+    @include mx.media_query(medium) {
+        font-size: v.$font-size-card-heading-md;
+        line-height: 2rem;
+    }
+
+    @include mx.media_query(large) {
+        font-size: v.$font-size-card-heading;
+        line-height: 2.72rem;
+    }
 }
 
 .line {
@@ -38,6 +49,21 @@
 }
 
 .section-container {
-    width: 80%;
+    width: 90%;
     margin-inline: auto;
+    
+    @include mx.media_query(large) {
+        width: 80%;
+    }
+}
+
+.close-btn {
+    background-color: transparent;
+    border: none;
+    color: v.$clr-secondary;
+    float: right;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 2rem;
 }

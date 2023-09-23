@@ -1,5 +1,5 @@
-@use 'variables' as v;
 @use 'mixins' as mx;
+@use 'variables' as v;
 
 html {
     box-sizing: border-box;
@@ -27,15 +27,35 @@ body {
 h1,
 h2,
 h3 {
-    font-size: v.$font-size-heading;
+    font-size: v.$font-size-heading-sm;
     font-family: v.$font-family-heading;
-    line-height: 4.53rem;
+    line-height: 2.53rem;
+    
+    @include mx.media_query(medium) {
+        font-size: v.$font-size-heading-md;
+        line-height: 3.53rem;
+    }
+
+    @include mx.media_query(large) {
+        font-size: v.$font-size-heading;
+        line-height: 4.53rem;
+    }
 }
 
 p {
-    font-size: v.$font-size-normal;
+    font-size: v.$font-size-normal-sm;
     font-family: v.$font-family-normal;
-    line-height: 1.15rem;
+    line-height: 1rem;
+    
+    @include mx.media_query(medium) {
+        font-size: v.$font-size-normal-md;
+        line-height: 1.15rem;
+    }
+    
+    @include mx.media_query(large) {
+        font-size: v.$font-size-normal;
+        line-height: 1.3rem;
+    }
 }
 
 a,
@@ -47,7 +67,9 @@ a:hover {
 
 li {
     list-style: none;
-    font-family: v.$font-family-normal
+    font-family: v.$font-family-normal;
+    font-size: v.$font-size-list;
+
 }
 
 img {

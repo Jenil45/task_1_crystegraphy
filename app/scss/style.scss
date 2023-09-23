@@ -2,8 +2,8 @@
 // This is main stylesheet
 
 /* || general  */
-@forward "variables";
 @forward "mixins";
+@forward "variables";
 
 /* || global css */
 @forward "globals";
@@ -11,6 +11,7 @@
 
 /* || page or section css */
 @forward "navbar";
+@forward "sidebar";
 @forward "home";
 @forward "about";
 @forward "pictures";

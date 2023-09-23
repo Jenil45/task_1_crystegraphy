@@ -9,10 +9,30 @@
     z-index: 1;
 
     &__section {
-        width: 90%;
+        width: 100%;
         padding: 0.8em 3.75em;
         margin-inline: auto;
         @include mx.flex(row, center, space-between);
+    }
+
+    &__logo-section {
+        @include mx.flex(row , center , space-between);
+        width: 100%;
+
+        img {
+            display: block;
+            width: 40px;
+            cursor: pointer;
+        }
+
+        @include mx.media_query(large) {
+
+            width: auto;
+
+            img {
+                display: none;
+            }
+        }
     }
 
     &__logo {
@@ -21,7 +41,7 @@
 }
 
 .nav {
-    width: 50%;
+    width: 70%;
 
     &__ul {
         @include mx.flex(row);
@@ -55,5 +75,11 @@
                 }
             }
         }
+    }
+
+    display: none;
+
+    @include mx.media_query(large) {
+        display: block;
     }
 }

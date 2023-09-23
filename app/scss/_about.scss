@@ -1,11 +1,16 @@
-@use "variables" as v;
 @use "mixins" as mx;
+@use "variables" as v;
 
 .about {
 
     &__container {
         position: relative;
-        @include mx.flex(row);
+        @include mx.flex(column-reverse);
+        gap: 1em;
+        
+        @include mx.media_query(large) {
+            @include mx.flex(row);
+        }
 
         &::after {
             content: url('../../assets/images/background/floating_coffee.png');
@@ -13,6 +18,13 @@
             position: absolute;
             right: -10%;
             bottom: -20%;
+            transform: scale(0.7);
+            display: none;
+
+            @include mx.media_query(large) {
+                transform: scale(1);
+                display: block;
+            }
         }
     }
 

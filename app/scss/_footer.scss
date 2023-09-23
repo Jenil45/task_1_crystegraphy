@@ -9,17 +9,25 @@
     @include mx.flex(column);
     
     &-nav {
-        width: 60%;
+        width: 90%;
         padding: 1.875rem 0;
+        
+        @include mx.media_query(large) {
+            width: 60%;
+        }
     
         &__ul {
             @include mx.flex(row);
-            gap: 5em;
+            flex-wrap: wrap;
+            gap: 1.8em;
+
+            @include mx.media_query(large) {
+                gap: 5em;
+            }
             
             li {
                 color: v.$clr-secondary;
                 padding: 0.875em 0;
-                font-size: v.$font-size-list;
                 font-weight: 500;
                 text-transform: capitalize;
                 cursor: pointer;
@@ -30,13 +38,22 @@
     &-contact {
         padding: 2.5em 0;   
         @include mx.flex(row);
-        gap: 3.75em;
+        flex-wrap: wrap;
+        gap: 1.75em;
+        
+        @include mx.media_query(large) {
+            gap: 3.75em;
+        }
 
 
         &__card {
             @include mx.flex(column);
             gap: 1.25em;
-            padding: 3.75em;
+            padding: 0.75em;
+            
+            @include mx.media_query(large) {
+                padding: 3.75em;
+            }
 
             &:nth-child(2) {
                 position: relative;
@@ -48,15 +65,27 @@
                 height: 70px;
                 border: 1px solid #2B2A2A;
                 right: 0;
+                display: none;
+                
+                @include mx.media_query(large) {
+                    display: block;
+                }
             }
-
+            
             &:nth-child(2)::before {
                 position: absolute;
                 content: "";
                 height: 70px;
                 border: 1px solid #2B2A2A;
                 left: 0;
+                display: none;
+
+                @include mx.media_query(large) {
+                    display: block;
+                }
             }
+
+
         }
 
         &__icon-wrapper {
