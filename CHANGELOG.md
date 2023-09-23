@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/Jenil45/task_1_crystegraphy/compare/v1.2.3...v1.3.0) (2023-09-23)
+
+
+### Features
+
+* Make a website reponsive ([c84d137](https://github.com/Jenil45/task_1_crystegraphy/commit/c84d1379e580e3c0f12b9e3fd86bfc5f21c6aecb))
+
 ### [1.2.3](https://github.com/Jenil45/task_1_crystegraphy/compare/v1.2.2...v1.2.3) (2023-09-22)
 
 ### [1.2.2](https://github.com/Jenil45/task_1_crystegraphy/compare/v1.2.1...v1.2.2) (2023-09-22)
